@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#d {
+            background-color: black;
+            color: aliceblue;
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 15pt;
+        }
+    </style>
+</head>
+<body>
+    <div id="d" onclick="clicar()" onmouseenter="entrou()" onmouseout="saiu()">
+    INTERAJA...
+    </div>
+
+    <script>
+        function clicar() {
+            var c = document.querySelector('#d')
+            c.innerText = 'clicou'
+        }
+        function entrou() {
+            var c = document.querySelector('#d')
+            c.innerText = 'Aqui mesmo!'
+        }
+        function saiu() {
+            var c = document.querySelector('#d')
+            c.innerText = 'saiu'
+        }
+    </script>
+</body>
+</html>

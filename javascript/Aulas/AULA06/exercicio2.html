@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: gray;
+            text-align: center;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        section {
+            background-color: white;
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 15px;
+            width: 500px;
+            margin: auto;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.596);
+            border-radius: 4px;
+            text-align: justify;
+            
+        }
+        footer {
+            color: white;
+            padding: 15px;
+            bottom: 0;
+            position: fixed;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function verificar() {
+            var data = new Date()
+            var ano = data.getFullYear()
+            var fano = document.querySelector('div#idade')
+            var res = document.querySelector('div#res')
+            if (fano.value.length == 0 || fano.value > ano) {
+                res.innerHTML = ('Gentileza preencher corretamente todos os dados')
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Verificador de idade</h1>
+    </header>
+    <section>
+        <div>
+            <p>Ano de nascimento: 
+                <input type="number" name="ano" id="idade">
+            </p>
+        </div>
+        <div>
+           <p>Sexo: 
+                <input type="radio" name="sele" id="mas" checked>
+                <label for="mas">Masculino</label>
+                <input type="radio" name="sele" id="fem">
+                <label for="fem">Feminino</label>
+            </p>
+            <input type="button" value="Verificar"> 
+        </div>
+        <div id='res'>
+            <p>Preencha o que se pede acima para ver o resultado!</p>
+        </div>
+    </section>
+    <footer>
+        Criado por Paulo Vitor.
+    </footer>
+</body>
+</html>

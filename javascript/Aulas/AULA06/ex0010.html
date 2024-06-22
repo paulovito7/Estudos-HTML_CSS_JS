@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sistema de nacionalidade</h1>
+    <p>Digite sua nacionalidade</p> 
+    <input type="text" nome='lugar' id="lugar">
+    <input type="button" value="Clique" onclick="clicou()">
+    <div id="res">
+        <p>Vocé para nós Brasileiros é um</p>
+    </div>
+    <script>
+        function clicou() {
+            var v = document.getElementById('input#lugar')
+            var res = document.getElementById('div#res')
+            }
+            if(v != 'Brasileiro') {
+                document.innerHtml += 'conterraneo'
+            }
+    </script>
+</body>
+</html>

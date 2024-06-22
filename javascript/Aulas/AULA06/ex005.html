@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: large;
+            font-size: larger; 
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = prompt(`Favor digitar seu nome`)
+        document.write(`<h2> ola, ${nome}!, seu nome tem ${nome.length} letras. </h2>`)
+        document.write(`<h2> seu nome em maiusculo fica assim: ${nome.toUpperCase()} </h2> `)
+        document.write(`<h2> seu nome em minusculo fica assim: ${nome.toLowerCase()} </h2> `)
+        var n1 = (1841,50)
+        n1.toLocaleString('pt-BR', {style: 'currency', 'corrency' : 'BRL'});
+        documet.write(`seu salario em real é ${n1}`)
+    </script>
+</body>
+</html>

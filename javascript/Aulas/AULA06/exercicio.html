@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horas</title>
+    <style>
+        body {
+            background-color: rgba(38, 38, 253, 0.842);
+        }
+        h1#t1cabeçalho {
+            color: white;
+            text-align: center;
+        }
+        section {
+            background-color: white;
+            text-align: center;
+            border-radius: 5px;
+            border: 50px;
+            width: 500px;
+            margin: auto;
+            padding: 10px;
+        }
+        div#bdd {
+            padding: 5%;
+            font-size: larger;
+            font-size: xx-large;
+        }
+        footer {
+            color: white;
+            padding: 15px;
+            bottom: 0;
+            position: fixed;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function mudar() {
+            var msg = document.getElementById('horas')
+            var bd = document.getElementById('bdd')
+            var data = new Date()
+            var hora = data.getHours() 
+            msg.innerHTML = `Agora são ${hora} horas!`
+            if (hora >= 6 && hora <= 12){
+                bd.innerHTML = ("Bom dia!");
+                document.body.style.background = '#e2cd9f'
+            } else if(hora >= 12 && hora <= 18){
+                bd.innerHTML = ("Boa tarde!");
+                document.body.style.background = '#b9846f'
+            } else {
+                bd.innerHTML = ("Boa noite!");
+                document.body.style.background = '#515154'
+            }
+        }
+    </script>
+</head>
+<body onload="mudar()">
+    <main>
+        <header>
+            <h1 id="t1cabeçalho">HORAS DO DIA</h1>
+        </header>
+        <section>
+            <div id='horas'>
+                horas aqui
+            </div>
+            <div id='bdd'>
+                mensagem aqui
+            </div>
+        </section>
+    </main>
+    <footer>
+        Criado por Paulo Vitor.
+    </footer>
+</body> 
+</html>
